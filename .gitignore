@@ -1,0 +1,23 @@
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+.terraform.lock.hcl
+.terraformrc
+
+# Local Python environments
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# IDEs
+.idea/
+.vscode/
+
+# Logs and temporary files
+*.log
+tmp/
+*.tmp

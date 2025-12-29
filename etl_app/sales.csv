@@ -1,0 +1,11 @@
+ID_Produto,Categoria,Valor,Data
+1,Eletronicos,1500.00,2023-01-01
+2,Livros,50.25,2023-01-01
+3,Eletronicos,200.50,2023-01-02
+4,Vestuario,120.00,2023-01-02
+5,Livros,35.75,2023-01-03
+6,Eletronicos,800.00,2023-01-03
+7,Vestuario,250.00,2023-01-04
+8,Livros,15.90,2023-01-04
+9,Eletronicos,100.00,2023-01-05
+10,Vestuario,75.50,2023-01-05

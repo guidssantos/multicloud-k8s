@@ -1,0 +1,34 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: etl-app-deployment
+  labels:
+    app: etl-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: etl-app
+  template:
+    metadata:
+      labels:
+        app: etl-app
+    spec:
+      serviceAccountName: etl-app-sa
+      containers:
+      - name: etl-app
+        image: gcr.io/windy-backbone-473721-n7/etl-app:latest
+        ports:
+        - containerPort: 8080
+        env:
+        - name: LANDING_ZONE_BUCKET
+          value: "etl-landing-zone-0245eb03d0ee7655"
+        - name: PROCESSED_ZONE_BUCKET
+          value: "etl-processed-zone-0245eb03d0ee7655"
+        resources:
+          requests:
+            cpu: "100m"
+            memory: "128Mi"
+          limits:
+            cpu: "200m"
+            memory: "256Mi"
